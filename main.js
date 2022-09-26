@@ -102,6 +102,7 @@ function DisplayTodos() {
     });
 
     deleteButton.addEventListener("click", (e) => {
+      // e.target.parentElement.parentElement.remove()
       todos = todos.filter((t) => t != todo);
       localStorage.setItem("todos", JSON.stringify(todos));
       DisplayTodos();
